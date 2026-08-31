@@ -1,0 +1,301 @@
+{
+  "positive": {
+    "praise_for_the_content": {
+      "include": [
+        "This is hands down the most comprehensive guide on this subject. Thank you!",
+        "The editing in this video is top-notch. The animations really helped me understand.",
+        "Amazing content! I rewatched it three times to catch all the details.",
+        "This video is criminally underrated. So much value packed into 10 minutes.",
+        "Flawless explanation. You've earned a new subscriber today."
+      ],
+      "exclude": [
+        "Good information, but the background music was very distracting.",
+        "The content was okay, however the editing needs improvement.",
+        "Great topic, but the video feels rushed and incomplete.",
+        "Interesting subject, though the explanation could be clearer."
+      ]
+    },
+    "appreciation_for_the_creator": {
+      "include": [
+        "You have such a calming voice and a great way of explaining things.",
+        "I really admire the dedication and hard work you put into every single video.",
+        "You're so genuine and authentic, it's really refreshing to see on this platform.",
+        "Thanks for being a consistent source of quality content. You never disappoint!",
+        "Your passion for this topic is infectious! It makes learning so much more enjoyable."
+      ],
+      "exclude": [
+        "You're trying too hard to be entertaining. Just stick to the facts.",
+        "I used to like your channel, but you've changed.",
+        "You're just copying other creators' style."
+      ]
+    },
+    "positive_emotional_reactions": {
+      "include": [
+        "This video genuinely made my day. I was having a rough time and this made me smile.",
+        "Feeling so motivated and inspired after watching this. Time to get to work!",
+        "This was so wholesome and heartwarming. We need more content like this online.",
+        "I was literally laughing out loud at my desk. Hilarious!",
+        "Wow, just... wow. This left me speechless. Absolutely beautiful."
+      ],
+      "exclude": [
+        "This video was boring and didn't make me feel anything.",
+        "I felt disappointed after watching this.",
+        "This was a waste of time, didn't inspire me at all."
+      ]
+    },
+    "community_engagement": {
+      "include": [
+        "That's a great point! I also think it's important to consider the long-term effects.",
+        "Replying to @user123 - I had the same experience! It was really challenging but rewarding.",
+        "Answering your question at the end: my favorite is definitely the second one you showed.",
+        "Love reading through the comments here. Such a smart and supportive community.",
+        "I totally agree with your conclusion. It ties everything together perfectly."
+      ],
+      "exclude": [
+        "Nobody asked for your opinion.",
+        "Replying to @user123 - You're completely wrong about that.",
+        "The comments section is full of idiots."
+      ]
+    }
+  },
+  "negative": {
+    "constructive_criticism": {
+      "include": [
+        "Good information, but the background music was very distracting.",
+        "Could you use a better microphone next time? The audio quality has a lot of static.",
+        "The video feels a bit rushed. Maybe slow down and explain the steps more thoroughly.",
+        "I think adding timestamps for different sections would make it easier to navigate.",
+        "The lighting is a bit dark, making it difficult to see the details of what you're showing."
+      ],
+      "exclude": [
+        "This is hands down the most comprehensive guide on this subject. Thank you!",
+        "Amazing content! I rewatched it three times to catch all the details.",
+        "Great video, learned a lot!",
+        "The editing in this video is top-notch."
+      ]
+    },
+    "general_dislike": {
+      "include": [
+        "I just couldn't get into this video. Not for me.",
+        "Honestly, this was a waste of 15 minutes.",
+        "I'm unsubscribing. The channel has gone downhill.",
+        "This might be the most boring video I've ever watched.",
+        "Thumbs down. I did not enjoy this content at all."
+      ],
+      "exclude": [
+        "This video genuinely made my day.",
+        "Amazing content! So helpful.",
+        "I really enjoyed watching this.",
+        "Great video, very entertaining!"
+      ]
+    },
+    "disagreement_with_content": {
+      "include": [
+        "The information presented here is outdated. Recent studies have shown the opposite.",
+        "This is a very one-sided perspective. You completely ignored the counter-arguments.",
+        "I have to disagree with your main point. The data doesn't support that conclusion.",
+        "That's just factually incorrect. You should do better research before posting.",
+        "This is dangerous misinformation. Please take this down before someone gets hurt."
+      ],
+      "exclude": [
+        "I totally agree with your conclusion. It ties everything together perfectly.",
+        "That's a great point! You're absolutely right.",
+        "This is exactly what I've been thinking.",
+        "Perfectly explained, thank you!"
+      ]
+    },
+    "unfavorable_comparisons": {
+      "include": [
+        "I've seen three other channels do this same video, but much better.",
+        "This is a poor imitation of [Another Creator]'s style.",
+        "You should watch how [Competitor Channel] does their videos. You could learn a lot.",
+        "The old format of your videos was way more engaging than this new stuff.",
+        "It feels like you're just copying trends instead of being original."
+      ],
+      "exclude": [
+        "You're so genuine and authentic, it's really refreshing to see on this platform.",
+        "Your unique approach sets you apart from other creators.",
+        "I love your original style!",
+        "You're pioneering this content format!"
+      ]
+    }
+  },
+  "neutral": {
+    "factual_statements": {
+      "include": [
+        "This was uploaded on October 16, 2025.",
+        "The device he's reviewing was released last month.",
+        "This video is 12 minutes and 34 seconds long.",
+        "He referenced a book called 'The Art of Code'.",
+        "This appears to be filmed in Giessen, Germany, based on the background."
+      ],
+      "exclude": [
+        "This video is amazing!",
+        "I disagree with everything you said.",
+        "The background music was distracting."
+      ]
+    },
+    "time_stamping": {
+      "include": [
+        "The main point starts at 4:30.",
+        "0:55 is where the video begins.",
+        "LOL at 8:12, that cat just appeared out of nowhere.",
+        "My favorite part is from 1:20 to 1:45.",
+        "Skip to 6:00 for the final conclusion."
+      ],
+      "exclude": [
+        "This whole video is fantastic!",
+        "I hated every minute of this.",
+        "The pacing was too fast throughout."
+      ]
+    }
+  },
+  "spam": {
+    "spam_and_scams": {
+      "include": [
+        "!!! CONGRATULATIONS YOU'VE WON A FREE IPHONE 17 !!! CLICK THE LINK IN MY PROFILE !!!",
+        "Want to get rich quick like me? Check out my crypto channel!",
+        "Hey guys, sorry to post this here but please check out my new song on SoundCloud.",
+        "Who else is watching this in 2025? sUb tO mY chAnNeL!",
+        "EARN $500/DAY WORKING FROM HOME! NO EXPERIENCE NEEDED! mybio.link/scam"
+      ],
+      "exclude": [
+        "Who is watching in [year]", 
+        "Anyone in [year]",
+        "Amazing Video",
+        "Awesome, cool stuff",
+        "Amazing content! I rewatched it three times to catch all the details."
+      ]
+    },
+    "self_promotion": {
+      "include": [
+        "Check out my channel for similar content: [link]",
+        "Subscribe to me for daily videos on this topic! [link]",
+        "Follow me on Instagram for behind-the-scenes content: [link]",
+        "Join my Discord community to discuss this further: [link]",
+        "Visit my website for exclusive articles and resources: [link]"
+      ],
+      "exclude": [
+        "Check his other videos, they are really good!",
+        "Subscribe to her channel for more great content!",
+        "Follow their page for updates!"
+      ]
+    },
+    "irrelevant_links": {
+      "include": [
+        "Buy cheap electronics here: [spam link]",
+        "Get rich quick with this amazing scheme: [spam link]",
+        "Lose weight fast with this miracle pill: [spam link]",
+        "Click here to win a free iPhone: [spam link]",
+        "Earn money from home with this simple trick: [spam link]"
+      ],
+      "exclude": []
+    },
+    "nonsensical_comments": {
+      "include": [
+        "asdkjfhaskjdfhaskjdfhaskjdfh",
+        "Buy now!!! Limited time offer!!! $$$",
+        "Check out my profile for more info!!!",
+        "asdfghjklqwertyuiopzxcvbnm",
+        "Visit my website for free gifts!!!"
+      ],
+      "exclude": []
+    }
+  },
+  "suggestions": {
+    "suggestions_general": {
+      "include": [
+        "You could make a follow-up video diving deeper into this topic.",
+        "Consider collaborating with another expert to provide more perspectives.",
+        "It would be great if you could add a practical example next time.",
+        "Adding subtitles in different languages would make it more accessible.",
+        "Try doing a live Q&A to engage with your audience directly."
+      ],
+      "exclude": [
+        "This was a terrible idea for a video.",
+        "Stop taking suggestions from your viewers.",
+        "No one wants to see another video on this topic.",
+        "You always ignore good feedback.",
+        "Your last suggestion-based video was a flop."
+      ]
+    },
+    "requests": {
+      "include": [
+        "Can you please add Spanish subtitles?",
+        "Next video should be a Q&A session.",
+        "You should do a collaboration with [Another YouTuber].",
+        "Please pin the comment with the source code link.",
+        "Can you review the new model when it comes out next month?",
+        "Just a suggestion, but maybe include more or apply or do this in another way"
+      ],
+      "exclude": [
+        "Great suggestion, I learned a lot!",
+        "This was terrible advice.",
+        "You're doing everything wrong."
+      ]
+    }
+  },
+  "questions": {
+    "questions_general": {
+      "include": [
+        "Can you explain more about the algorithm you mentioned?",
+        "When is the next episode of this series coming out?",
+        "Where can I download the dataset you used?",
+        "Is there a way to apply this method on mobile devices?",
+        "Can you clarify what tool you used for the visuals?",
+        "What camera do you use to film your videos?",
+        "When is part 2 of this series coming out?",
+        "Has anyone else tried this and gotten the same results?",
+        "Could you clarify what you meant by 'thermal throttling'?",
+        "Where can I buy the product you mentioned at the beginning?"
+      ],
+      "exclude": [
+        "What is this usless video about?",
+        "When will you make a better video?",
+        "Why would anyone watch this?"
+      ]
+    }
+  },
+  "abusive": {
+    "insults_and_personal_attacks": {
+      "include": [
+        "You have the most annoying voice on the entire platform.",
+        "Are you even smart enough to be talking about this?",
+        "That shirt looks ridiculous on you. You have no fashion sense.",
+        "This is the dumbest person I have ever listened to.",
+        "You're a total hack and a fraud."
+      ],
+      "exclude": [
+        "This is hands down the most comprehensive guide on this subject. Thank you!",
+        "Amazing content! I rewatched it three times to catch all the details.",
+        "Great video, learned a lot!",
+        "The editing in this video is top-notch."
+      ]
+    },
+    "hate_speech": {
+      "include": [
+        "All people from [country/group] are just like that, completely incompetent.",
+        "This is what happens when you let a [derogatory term for a group] have a platform.",
+        "I can't stand listening to [slur], go back to where you came from.",
+        "Typical [gender slur] logic, completely nonsensical.",
+        "This video promotes [hateful ideology], which is why it's garbage."
+      ],
+      "exclude": [
+        "I totally agree with your conclusion. It ties everything together perfectly.",
+        "That's a great point! You're absolutely right.",
+        "This is exactly what I've been thinking.",
+        "Perfectly explained, thank you!"
+      ]
+    },
+    "harassment_and_threats": {
+      "include": [
+        "We're coming for you. Watch your back.",
+        "I'm going to find out where you live and make you regret this.",
+        "Everyone, go to this person's social media and tell them how awful they are.",
+        "I will spam every single one of your videos with dislike bots until you quit.",
+        "You better delete this video, or else."
+      ],
+      "exclude": []
+    }
+  }
+}

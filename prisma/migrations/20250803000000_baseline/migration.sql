@@ -1,0 +1,2 @@
+-- This is a baseline migration to match the current database state
+-- No changes needed as database already exists with correct structure

@@ -1,0 +1,11 @@
+// Video analysis status constants
+export const VIDEO_STATUS = {
+  PENDING: 'PENDING',
+  FETCHING_DETAILS: 'FETCHING_DETAILS', 
+  DOWNLOADING_COMMENTS: 'DOWNLOADING_COMMENTS',
+  ANALYZING_COMMENTS: 'ANALYZING_COMMENTS',
+  COMPLETED: 'COMPLETED',
+  FAILED: 'FAILED'
+} as const;
+
+export type VideoStatus = typeof VIDEO_STATUS[keyof typeof VIDEO_STATUS];
