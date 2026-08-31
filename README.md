@@ -1,40 +1,42 @@
 # ConnectUpPro
 
-ConnectUpPro is a self-hosted Next.js app for analyzing YouTube comments. It
-downloads comments, creates Gemini embeddings, groups comments into semantic
-clusters, and provides an interactive analysis dashboard.
+> Turn a YouTube comment section into a clear map of what your audience thinks.
 
-The open-source edition is deliberately single-workspace: there is no login,
-hosted authentication, billing, or external account service. Everyone who can
-reach an installation shares its local workspace, so run it on a private
-machine or trusted network.
+ConnectUpPro is an open-source, self-hosted workspace for discovering themes,
+questions, and sentiment in YouTube comments. Paste a public video URL, let AI
+organize the conversation, and explore the feedback in one focused dashboard.
 
 <div align="center">
   <img src="./public/dashboard-main.webp" alt="ConnectUpPro comment analysis dashboard" width="49%" />
   <img src="./public/features.webp" alt="ConnectUpPro semantic search and topic analysis features" width="49%" />
 </div>
 
-## Requirements
+## Why ConnectUpPro?
 
-- Node.js 20 or newer
-- PostgreSQL 15 or newer with the `vector` and `uuid-ossp` extensions
-- A Google API key with YouTube Data API v3 and Gemini API access
+Reading hundreds or thousands of comments one by one hides the patterns that
+matter. ConnectUpPro helps creators and researchers move from raw feedback to
+useful signals:
 
-The easiest database setup is Docker:
+- **See the big themes** — AI groups similar comments into discoverable topic clusters.
+- **Ask better questions** — semantic search finds meaning, not just exact keywords.
+- **Understand the tone** — explore positive, negative, neutral, and other sentiment patterns.
+- **Keep the data close** — run it on your own machine with your own database and API keys.
+
+## Quick start
+
+### Prerequisites
+
+- Node.js 20+
+- PostgreSQL 15+ with `vector` and `uuid-ossp` extensions
+- A Google API key with access to YouTube Data API v3 and Gemini
+
+The fastest way to run PostgreSQL locally is Docker:
 
 ```bash
 docker compose up -d db
 ```
 
-If you use an existing PostgreSQL server, enable the extensions as a database
-administrator:
-
-```sql
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-CREATE EXTENSION IF NOT EXISTS vector;
-```
-
-## Quick start
+Then start ConnectUpPro:
 
 ```bash
 npm install
@@ -44,63 +46,50 @@ npm run db:push
 npm run dev
 ```
 
-Then open <http://localhost:3000>. The only required environment variables are:
+Open <http://localhost:3000> and add a public YouTube video URL.
+
+Your `.env.local` needs:
 
 ```env
 DATABASE_URL="postgresql://connectuppro:connectuppro@localhost:5432/connectuppro?schema=public"
 GOOGLE_API_KEY="your_google_api_key"
 ```
 
-Create a Google API key in the [Google Cloud Console](https://console.cloud.google.com/),
-enable YouTube Data API v3, and make sure the key can call the Gemini API used
-by your Google project. YouTube API quota and Gemini usage are governed by
-Google's limits for that key.
+Create the key in the [Google Cloud Console](https://console.cloud.google.com/),
+enable YouTube Data API v3, and enable Gemini access for the same project.
+
+## What happens after you add a video?
+
+1. ConnectUpPro imports the video and its comments.
+2. Gemini creates embeddings so comments can be compared by meaning.
+3. The dashboard organizes the conversation into themes and sentiment.
+4. You can search, filter, and inspect the comments behind each insight.
+
+## Important scope notes
+
+This open-source edition is intentionally simple:
+
+- It analyzes individual public YouTube videos. Direct channel ID lookup is also supported.
+- It is a **single-workspace** app: there is no built-in login, OAuth, billing, or hosted account service.
+- Anyone who can reach the installation can access its workspace. Run it on a private machine or trusted network.
+- YouTube API quota and Gemini usage follow Google’s limits for your API key.
 
 ## Useful commands
 
 ```bash
-npm run dev          # Check configuration and start Next.js
-npm run build        # Check configuration, generate Prisma, and build
-npm run start        # Start a production build
-npm run db:generate  # Regenerate the Prisma client
-npm run db:push      # Apply the Prisma schema to PostgreSQL
-npm run test:youtube # Verify the YouTube key and comment access
+npm run dev          # Start the development server
+npm run build        # Build for production
+npm run start        # Run the production build
+npm run test:youtube # Check YouTube API access
 ```
 
-## How it works
+## Contributing
 
-1. A YouTube URL is submitted from the dashboard.
-2. Video metadata and comments are fetched with `GOOGLE_API_KEY`.
-3. A background queue stores comments and generates Gemini embeddings.
-4. PostgreSQL/pgvector stores the data and embeddings.
-5. Gemini names semantic clusters; local keyword fallbacks keep processing
-   useful when a naming request fails.
-
-The relational schema still has a `User` owner because projects, videos, and
-semantic searches were designed around ownership. On first request,
-`src/lib/local-user.server.ts` creates one local owner automatically. If a
-database from the former hosted version already has a user, the first existing
-user is reused so its data remains visible.
-
-## API and YouTube channels
-
-The main workflow analyzes individual public YouTube video URLs. Public channel
-video lookup is available when a channel ID is supplied directly. Listing the
-signed-in user's channels requires Google OAuth permissions, which are
-intentionally not part of this API-key-only edition.
-
-## Configuration notes
-
-- `LOCAL_USER_NAME` and `LOCAL_USER_EMAIL` are optional display metadata.
-- Do not commit `.env.local` or any API keys.
-- The app has no built-in authentication. Do not expose it to the public
-  internet without putting it behind your own network access control.
-- PostgreSQL must provide pgvector because semantic search uses vector values.
+Issues, ideas, and pull requests are welcome. If you find a bug or have a
+feature in mind, please [open an issue](https://github.com/krngd2/ConnectUpPro/issues)
+with enough context to reproduce or evaluate it.
 
 ## License
 
-All original ConnectUpPro source code, documentation, configuration, scripts,
-and included visual assets are released under the [MIT License](./LICENSE).
-You are free to use, copy, modify, publish, distribute, sublicense, and sell
-them, subject to the license terms. Third-party dependencies and external
-content or services retain their own licenses and terms.
+ConnectUpPro is released under the [MIT License](./LICENSE). Third-party
+dependencies and external services retain their own licenses and terms.
